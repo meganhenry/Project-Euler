@@ -14,5 +14,3 @@ while (fibNext <= n) {
 }
   return fibNumSum;
 }
-
-fiboEvenSum(10);
