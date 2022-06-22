@@ -1,0 +1,18 @@
+function fiboEvenSum(n) {
+let fibNumSum = 0;
+let fibCurrent = 0;
+let fibNext = 1;
+
+while (fibNext <= n) {
+  let fibTotal = fibCurrent + fibNext;
+  fibCurrent = fibNext;
+  fibNext = fibTotal;
+
+ if (fibTotal % 2 == 0) {
+   fibNumSum += fibTotal;
+ }
+}
+  return fibNumSum;
+}
+
+fiboEvenSum(10);
