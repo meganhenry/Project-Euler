@@ -1,0 +1,24 @@
+function getSumSquares(ceiling, total = 0) {
+  if (ceiling === 0) {
+    return total;
+  }
+  let squared = (total += ceiling **2);
+  return getSumSquares(ceiling -1, total);
+}
+
+function getSquareSum(ceiling, total = 0) {
+  if (ceiling === 0) {
+    return total ** 2;
+  }
+  total += ceiling;
+  return getSquareSum(ceiling - 1, total)
+}
+
+function sumSquareDifference(n) {
+  let sumOfSquares = getSumSquares(n)
+  let squareOfSum = getSquareSum(n);
+  
+  return squareOfSum - sumOfSquares;
+}
+
+sumSquareDifference(100);
