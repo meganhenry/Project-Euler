@@ -2,7 +2,7 @@ function getSumSquares(ceiling, total = 0) {
   if (ceiling === 0) {
     return total;
   }
-  let squared = (total += ceiling **2);
+  total += ceiling **2;
   return getSumSquares(ceiling -1, total);
 }
 
@@ -20,5 +20,3 @@ function sumSquareDifference(n) {
   
   return squareOfSum - sumOfSquares;
 }
-
-sumSquareDifference(100);
