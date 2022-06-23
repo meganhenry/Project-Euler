@@ -2,13 +2,10 @@ function largestPrimeFactor(number) {
   let primesAndFactors = [];
 
   for (let factorIterator = 0; factorIterator <= number; factorIterator++) {
-    // check if the num is a factor
     let isFactor = number % factorIterator == 0;
     let isPrime = true;
     
     if (isFactor) {
-      // check if factorIterator is prime
-      // a prime number has two factors, 1 and itself
       for (let i = 2; i < factorIterator; i++){
         if (factorIterator % i == 0) {
         isPrime = false;
@@ -16,11 +13,9 @@ function largestPrimeFactor(number) {
         }
       } 
     }
-    // if it is, push to our primes list
     if(isFactor && isPrime) {
       primesAndFactors.push(factorIterator);
     }
   }
-
   return primesAndFactors.pop();
 }
